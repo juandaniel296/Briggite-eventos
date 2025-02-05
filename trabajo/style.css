@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-image: url(imagenes/Rectangle.png) ;
+    
+}
+header{
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    font-family: "Handlee", serif;
+    font-weight: 700;
+    font-style: normal;
+    background-image: url(imagenes/rect1.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.mg-1{
+    width:800px ;
+    height: 122px;
+    z-index:0 ;
+    position: absolute;
+    
+    
+}
+.header_div{
+  z-index: 3;
+  display: flex;
+  align-items: center;
+}
+
+a{
+  color: rgb(228, 25, 126);
+  padding-right:10px ;
+  text-decoration: none;
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+  header {
+      display: block;
+      font-size: 10px;
+      position: relative;
+  }
+  header img {
+      width: 50px;
+      height: auto;
+      z-index: 2;
+  }
+  .mg-1 {
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}
+
+  
+  /* Tabletas */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+    header{
+        font-size: 15px;
+    }
+    .mg-1{
+      width: 400px;
+      height: 122px;
+    }
+  }
+  
+  /* Laptops */
+  @media (min-width: 1440px) {
+    body {
+      font-size: 23px;
+    }
+ 
+  }
+  
+  /* Pantallas grandes */
+  @media (min-width: 1920px) {
+    body {
+      font-size: 25px;
+    }
+  }
