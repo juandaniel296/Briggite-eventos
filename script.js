@@ -2,10 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const bloque = document.getElementById("mg-1");
   const logo = document.getElementById("logo");
   const posicionInicial = 10;  // Posición inicial en px
-  const desplazamiento = 200;  // Distancia a moverse en px
+  let desplazamiento = 200;  // Distancia a moverse en px
+  const mediaQuery  = window.matchMedia('(max-width : 480px)')
   let posicionActual = posicionInicial; //variable que cambia su valor 
   let destino = posicionInicial; // varible que cambia a que  lugar quiere ir a 10px o 210 px
-  let animacionActiva = false; // verifica si  se puede ejecutar el codigo
+  let animacionActiva = false; // verifica si  se puede ejecuta(r el codigo
 
   function animar() {
     if (!animacionActiva) return; // esto la ! cambia la animacionActiva = true por lo que  la primera condiconal se ejecuta y no la segunda
@@ -45,6 +46,21 @@ document.addEventListener("DOMContentLoaded", () => {
       animar();
     }
   });
+  function actualizarValor(e) {
+    if (e.matches) {
+      // Si la pantalla es de 480px o menos
+      desplazamiento = 130; // Cambia este valor según lo que necesites
+    } else {
+      // Si la pantalla es mayor a 480px
+      desplazamiento = 200 // Valor para pantallas más grandes
+    }
+  }
+    // Ejecutar la función al cargar la página
+  actualizarValor(mediaQuery);
+
+  // Escuchar los cambios en el tamaño de la pantalla
+  mediaQuery.addEventListener('change', actualizarValor);
+    
 });
 
 
