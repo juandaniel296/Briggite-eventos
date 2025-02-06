@@ -21,12 +21,10 @@ header{
     background-size:cover;
 }
 .mg-1{
-    width:800px ;
-    height: 122px;
-    z-index:0 ;
-    position: absolute;
-    
-    
+  width:700px ;
+  height: 122px;
+  z-index:0 ;
+  position: absolute; 
 }
 .header_div{
   z-index: 3;
@@ -40,53 +38,30 @@ a{
   text-decoration: none;
 }
 
-/* Teléfonos pequeños */
-@media (max-width: 320px) {
-  body {
-    font-size: 14px;
+@media (max-width: 480px) {
+  
+  header{
+    display: block;
   }
-  header {
-      display: block;
-      font-size: 10px;
-      position: relative;
+  .mg-1{
+
+    width:  50%;
+    z-index: 1;
+    height: 143px;
+    
   }
-  header img {
-      width: 50px;
-      height: auto;
-      z-index: 2;
-  }
-  .mg-1 {
-    position: absolute;
-    transform: translateX(-50%);
+  .header_div , header a{
+    position: relative;   
+    z-index:  2;
   }
 }
+@media (max-width: 767px) {
+  .mg-1{
+    width: 400px;
+  }
+  .header_div , header a{
+    position: relative;   
+    z-index:  2;
+  }
 
-  
-  /* Tabletas */
-  @media (max-width: 768px) {
-    body {
-      font-size: 16px;
-    }
-    header{
-        font-size: 15px;
-    }
-    .mg-1{
-      width: 400px;
-      height: 122px;
-    }
-  }
-  
-  /* Laptops */
-  @media (min-width: 1440px) {
-    body {
-      font-size: 23px;
-    }
- 
-  }
-  
-  /* Pantallas grandes */
-  @media (min-width: 1920px) {
-    body {
-      font-size: 25px;
-    }
-  }
+}
