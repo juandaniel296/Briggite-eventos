@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function actualizarValor(e) {
     if (e.matches) {
       // Si la pantalla es de 480px o menos
-      desplazamiento = 130; // Cambia este valor según lo que necesites
+      desplazamiento = 100; // Cambia este valor según lo que necesites
     } else {
       // Si la pantalla es mayor a 480px
       desplazamiento = 200 // Valor para pantallas más grandes
