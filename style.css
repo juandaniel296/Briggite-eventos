@@ -8,7 +8,6 @@ body{
     
 }
 header{
-    z-index: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -37,14 +36,12 @@ a{
   padding-right:10px ;
   text-decoration: none;
 }
-
-@media (max-width: 480px) {
-  
+@media (max-width: 299px) and (min-width: 120px) {  
   header{
     display: block;
   }
   .mg-1{
-
+    
     width:  50%;
     z-index: 1;
     height: 143px;
@@ -53,15 +50,32 @@ a{
   .header_div , header a{
     position: relative;   
     z-index:  2;
+    font-size: 10px;
   }
+  .fondo1{
+    width: 70px;
+  }
+
+
 }
-@media (max-width: 767px) {
+
+@media (max-width: 480px) and (min-width: 300px) {
+  body{
+    background: red;
+  }
+  header{
+    display: block;
+  }
   .mg-1{
-    width: 400px;
+    
+    width:  70%;
+    z-index: 1;
+    height: 143px;
+    
   }
   .header_div , header a{
     position: relative;   
     z-index:  2;
+    font-size: 13px;
   }
-
 }
